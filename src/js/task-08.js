@@ -13,7 +13,7 @@ function settings(event) {
   const { password, email } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
-    alert("You must fill all fields");
+    return alert("You must fill all fields");
   }
 
   result.email = email.value;
