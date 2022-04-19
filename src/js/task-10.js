@@ -10,7 +10,6 @@ const ref = {
   spaceForBoxes: document.getElementById("boxes"),
 };
 
-let amountOfSquares = 0;
 //
 
 ref.onCreateDivBtn.addEventListener("click", createDiv);
