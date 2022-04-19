@@ -18,7 +18,7 @@ console.log(refs);
 
 function makeImgEl() {
   const result = images
-    .map((el) => `<img src="${el.url} alt="${el.alt}">`)
+    .map((el) => `<img src="${el.url} alt="${el.alt} class='images'">`)
     .join("");
 
   refs.insertAdjacentHTML("beforeend", result);
