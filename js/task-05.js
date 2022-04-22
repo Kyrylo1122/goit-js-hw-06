@@ -4,5 +4,7 @@ const userSpan = document.querySelector("#name-output");
 userInput.addEventListener("input", addUserName);
 
 function addUserName(event) {
-  userSpan.textContent = event.currentTarget.value;
+  return event.currentTarget.value !== ""
+    ? (userSpan.textContent = event.target.value)
+    : (userSpan.textContent = "Anonymous");
 }

@@ -1,13 +1,16 @@
-const refs = {
-  validInput: document.querySelector("#validation-input"),
-};
-refs.validInput.addEventListener("blur", checkInput);
+const validInput = document.querySelector("#validation-input");
+
+validInput.addEventListener("blur", checkInput);
 
 function checkInput(event) {
-  if (event.currentTarget.value.length < refs.validInput.dataset.length) {
-    return refs.validInput.classList.add("invalid");
+  let hasInvalidTag = document.querySelector(".invalid");
+  if (hasInvalidTag) {
+    hasInvalidTag.classList.remove("invalid");
   }
-  if (event.currentTarget.value.length >= refs.validInput.dataset.length) {
-    return refs.validInput.classList.replace("invalid", "valid");
+  const correctLength = validInput.dataset.length;
+  if (event.target.value.length == correctLength) {
+    validInput.classList.add("valid");
+  } else {
+    validInput.classList.add("invalid");
   }
 }
